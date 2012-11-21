@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<style>
+body {
+  text-align: center;
+}
+div {
+  padding: 3px;
+  border: 1px solid #000;
+  background: #c00;
+  color: #fff;
+  font-size: 3em;
+}
+</style>
+</head>
+<body>
+<span id="alert">...</span><br>
+<div id="prev"><br>Previous slide<br></div>
+<br><br><br>
+<div id="next"><br>Next slide<br></div>
+</body>
+<script>
+alert(location.host);
+var ws = new WebSocket("ws://"+location.host);
+ws.onopen = function(){
+  document.querySelector("#alert").innerText = "Connected";
+}
+document.querySelector("#prev").addEventListener('touchstart', function(e){
+    ws.send("Prev");
+},false);
+
+document.querySelector("#next").addEventListener('touchstart', function(e){
+    ws.send("Next");
+},false);
+</script>
+</html>
