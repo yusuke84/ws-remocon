@@ -10,7 +10,7 @@ A remote controller tool for Google presentations. By this software, you can ope
 
 > node app
 
-2nd, find your PC's IP address and access to the server from remote smartphone. (URL shown below is assuming that your IP address is 192.168.0.10 and server's port number is 3000. Please change those number depending on your environments.
+2nd, find your PC's IP address and access to the server from remote smartphone. (URL shown below is assuming that your IP address is 192.168.0.10 and server's port number is 3000. Please change those number depending on your environments.)
 
 > Access below url from your smartphone
 > http://192.168.0.10:3000/con.html
